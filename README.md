@@ -124,19 +124,3 @@ For implementation in advanced agentic systems (Claude 3.5+, GPT-4/5 architectur
         <analytics>Supply quantitative justification and append a final Confidence Score (0-100%) based on the robustness of the Anchor data and Litmus validation.</analytics>
     </pillar_a_actionable_analytics>
 </alpha_protocol_configuration>
-
-Intellectual Property and License
-The ALPHA Framework is an original architectural design authored by Davide Rollo.
-
-This project and its associated documentation are licensed under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this framework and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-Suggested Academic/Professional Citation:
-While the MIT License permits unrestricted use provided the copyright notice is retained, professional attribution is requested in academic papers, corporate documentation, or derivative agentic architectures:
-
-Davide Rollo (2026). ALPHA Protocol: Socratic Safety Architecture for Mission-Critical AI Agents. GitHub Repository: https://github.com/ramizz232-ux/ALPHA-Protocol-Framework
