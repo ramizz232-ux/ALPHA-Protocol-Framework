@@ -10,6 +10,24 @@ As artificial intelligence transitions from conversational models to autonomous 
 
 Unlike traditional descriptive frameworks (e.g., COSTAR, GOLD) which focus on formatting output, ALPHA enforces a rigorous dialectical validation structure. It operates as a strict boundary-control system, merging deterministic computation with the Socratic method of refutation. It is expressly designed for high-stakes environments such as quantitative finance, cybersecurity incident response, and algorithmic medical diagnostics.
 
+```mermaid
+graph TD
+    classDef core fill:#000000,stroke:#ffffff,stroke-width:2px,color:#ffffff;
+    classDef validation fill:#333333,stroke:#ffffff,stroke-width:2px,color:#ffffff;
+    classDef output fill:#666666,stroke:#ffffff,stroke-width:2px,color:#ffffff;
+
+    A[INPUT: Anchor & Aim]:::core --> B{Is Anchor Data Complete?}
+    B -- NO --> C[[TERMINATE: MISSING DATA]]:::output
+    B -- YES --> D[PROCESSING: Logic & Litmus Test]:::core
+    
+    D --> E{Does Litmus Test Pass?}
+    E -- NO --> F[APORIA: Declare Dead-End]:::validation
+    F --> D
+    E -- YES --> G[FILTER: Parameters & Pitfalls]:::core
+    
+    G --> H[FORMAT: Hierarchy & Habitus]:::core
+    H --> I((OUTPUT: Actionable Analytics & Confidence Score)):::output
+
 ## 2. Architectural Breakdown: The Five Pillars
 
 ### [A] Anchor & Aim
@@ -43,36 +61,7 @@ The execution layer.
 * **Actionable:** Culminates in a singular, unambiguous executable recommendation (e.g., a Call to Action, a specific code commit, or a Binary Signal such as ISOLATE/MAINTAIN).
 * **Analytics:** Provides the quantitative evidence supporting the actionable signal, concluding with a mathematically or logically derived Confidence Score (0-100%). If the score is below the threshold defined in the Parameters, the Actionable must default to a safe-state recommendation.
 
-## 3. Applied Use Cases & Prompt Examples
-To ensure immediate usability, below are applied examples of the ALPHA Protocol in mission-critical environments.
-
-### Use Case 1: Cybersecurity Incident Response
-**Objective:** Determine whether to isolate a core database server based on anomalous traffic.
-* **[A] Anchor:** Server X logs show an outbound traffic spike of 400% above the 30-day moving average to an unrecognized IP address. Administrator Y logged in 4 minutes prior. Database contains encrypted PII.
-* **Aim:** Provide a binary ISOLATE / DO NOT ISOLATE command.
-* **[L] Logic:** Apply MITRE ATT&CK framework analysis.
-* **Litmus:** Play Devil's Advocate. Could Administrator Y be performing a scheduled backup? What logs are missing to prove this is not an Account Takeover (ATO)?
-* **[P] Parameters:** Do not isolate if confidence of attack is < 60% due to SLA uptime penalties.
-* **Pitfalls:** Risk of "Alert Fatigue"; risk of attacker using legitimate admin credentials.
-* **[H] Hierarchy:** Addressed to the CISO.
-* **Habitus:** Aseptic, telegrafic. Zero sycophancy: do not downplay the risk if the user suggests it might just be a glitch.
-* **[A] Actionable:** Provide the binary command.
-* **Analytics:** Calculate the exact data exfiltration rate and provide the Confidence Score.
-
-### Use Case 2: Quantitative Finance (Algorithmic Trading)
-**Objective:** Evaluate a sudden market drop for a specific asset and recommend a trading action.
-* **[A] Anchor:** Asset Z has dropped 8% in 15 minutes. Trading volume is 3x the average. The VIX index is currently at 25. No major news events reported in the last hour.
-* **Aim:** Recommend BUY, SELL, or HOLD.
-* **[L] Logic:** Execute Python code to calculate the Relative Strength Index (RSI) and Bollinger Bands based on the provided data.
-* **Litmus:** Challenge the hypothesis. If the technicals suggest a "BUY" (oversold), hypothesize why this might be a structural collapse rather than a temporary dip (e.g., impending unannounced regulatory action).
-* **[P] Parameters:** Maximum capital allocation per trade is $50,000.
-* **Pitfalls:** Slippage in high-volatility environments; statistical hallucinations by the LLM (mitigated by Python requirement).
-* **[H] Hierarchy:** Addressed to Senior Portfolio Manager.
-* **Habitus:** Academic financial rigor. No hedging language.
-* **[A] Actionable:** Specific trade execution command.
-* **Analytics:** Output the exact RSI integer and Confidence Score.
-
-## 4. Operational Cheatsheet
+## 2. Operational Cheatsheet
 
 | Phase | Component | Critical Function | Error Elimination Target |
 | :--- | :--- | :--- | :--- |
