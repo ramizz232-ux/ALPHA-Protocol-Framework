@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this architectural framework in your research or agentic systems, please cite it using the metadata below."
 authors:
-  - family-names: "[Your Last Name]"
-    given-names: "[Your First Name]"
+  - family-names: "Rollo"
+    given-names: "Davide"
 title: "ALPHA Protocol: Socratic Safety Architecture for Mission-Critical AI Agents"
 version: 1.0.0
 date-released: 2026-02-27
-url: "https://github.com/[Your Username]/[Repository Name]"
+url: https://github.com/ramizz232-ux/ALPHA-Protocol-Framework
 keywords:
   - prompt-engineering
   - ai-safety
